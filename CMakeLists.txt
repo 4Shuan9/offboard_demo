@@ -37,10 +37,10 @@ add_executable(offboard_demo_odometry
 ament_target_dependencies(offboard_demo_odometry rclcpp px4_msgs)
 
 # Auto-land control node
-add_executable(offboard_demo_auto_land 
-  src/offboard_demo_auto_land.cpp
+add_executable(offboard_demo_autoland 
+  src/offboard_demo_autoland.cpp
 )
-ament_target_dependencies(offboard_demo_auto_land rclcpp px4_msgs)
+ament_target_dependencies(offboard_demo_autoland rclcpp px4_msgs)
 
 # ===================================================
 # INSTALL TARGETS
@@ -49,7 +49,7 @@ install(TARGETS
   offboard_demo
   offboard_demo_local_position
   offboard_demo_odometry
-  offboard_demo_auto_land
+  offboard_demo_autoland
   DESTINATION lib/${PROJECT_NAME}
 )
 
