@@ -42,6 +42,13 @@ add_executable(offboard_demo_autoland
 )
 ament_target_dependencies(offboard_demo_autoland rclcpp px4_msgs)
 
+# slung payload smooth takeoff node
+add_executable(slung_takeoff 
+  src/slung_takeoff.cpp
+)
+ament_target_dependencies(slung_takeoff rclcpp px4_msgs)
+
+
 # ===================================================
 # INSTALL TARGETS
 # ===================================================
@@ -50,6 +57,7 @@ install(TARGETS
   offboard_demo_local_position
   offboard_demo_odometry
   offboard_demo_autoland
+  slung_takeoff # <-- [新增] 确保编译后的可执行文件被安装到正确位置
   DESTINATION lib/${PROJECT_NAME}
 )
 
