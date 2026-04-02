@@ -99,7 +99,7 @@ private:
     float target_y_{0.0f};
     float target_z_{0.0f};
     const float FINAL_Z = -5.0f;     
-    const float ASCENT_SPEED = 0.1f; 
+    const float ASCENT_SPEED = 0.5f; 
     const float DT = 0.1f;           
 
     void publish_offboard_control_mode();
